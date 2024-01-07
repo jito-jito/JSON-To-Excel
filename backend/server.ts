@@ -7,14 +7,15 @@ if(environment.error) {
 }
 
 import express from 'express'
-import { root } from './routes/root.js'
+import rootRouter from './routes/root.route.js'
 import { isInteger } from './utils.js';
 import { logger } from "./logger.js"
 
 const app = express()
 
 function setupExpress() {
-  app.route("/").get(root)
+  app.use(express.json())
+  app.use("/api/v1", rootRouter)
 }
 
 function startServer() {
