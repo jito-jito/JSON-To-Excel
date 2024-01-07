@@ -1,0 +1,4 @@
+{
+    "level": "info",
+    "message": "HTTP API running on port: http://localhost:9000"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "npm-run-all clean build start",
+    "dev-server": "tsc-watch --onSuccess \"node dist/server.js 9001\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.3.3"
+  }
+}
