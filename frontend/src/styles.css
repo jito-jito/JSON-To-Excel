@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-menu: #390037;
+  --bg-main: #FFF;
+  --bg-secondary: #FFFBFC;
+
+  --bg-button: #FD3456;
+  --bg-button--disabled: #DEDDDD;
+
+  --fn-color-menu: #FFF;
+  --fn-color-main: #000000;
+  --fn-color-button: #290042;
+  --fn-color-button--disabled: #FFF;
+  --fn-color-danger: #EB0A1E;
+  --main-font: 'Saira Semi Condensed', sans-serif;
+
+  --page-padding: 15px;
+}
+
+* {
+  font-family: var(--main-font);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1,h2 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.text-danger {
+  color: var(--fn-color-danger);
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --page-padding: 10vw;
+  }
+}

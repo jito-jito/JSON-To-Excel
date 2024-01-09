@@ -1,0 +1,14 @@
+<div (click)="fileInput.click()" class="input-file">
+  <input #fileInput (change)="onChangeFile($event)" type="file" name="" id="">
+
+  @if(file) {
+    <div class="input-file-add">
+      <img src="../../../assets/json-file-icon.png" alt="">
+      <p>{{file.name}}</p>
+    </div>
+
+  } @else {
+    <p>Pincha aquí para agregar el archivo</p>
+  }
+
+</div>

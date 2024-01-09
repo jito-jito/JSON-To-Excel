@@ -1,6 +1,5 @@
 import xl from 'excel4node';
 import { tableModel } from '../models/tableModels.model';
-import { logger } from '../logger.js';
 
 function createExcel(excelOptions: tableModel) {
   const workBook = new xl.Workbook()

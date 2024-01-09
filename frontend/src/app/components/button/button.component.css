@@ -1,0 +1,40 @@
+.button {
+  padding: 13px;
+  background-color: var(--bg-button);
+  border: 2px solid transparent;
+  color: var(--fn-color-button);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all ease-out 200ms
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--bg-button);
+  color: var(--bg-button);
+}
+
+:host-context(.inverseColor) .button {
+  background-color: transparent;
+  border: 2px solid var(--bg-button);
+  color: var(--bg-button);
+}
+
+:host-context(.inverseColor) .button:hover {
+  cursor: pointer;
+  background-color: var(--bg-button);
+  border: 2px solid var(--bg-button);
+  color: var(--fn-color-button);
+}
+
+.button:disabled {
+  background-color: var(--bg-button--disabled);
+  color: var(--fn-color-button--disabled);
+}
+
+.button:disabled:hover {
+  cursor: auto;
+  border: 2px solid transparent;
+}

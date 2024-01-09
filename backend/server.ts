@@ -7,6 +7,7 @@ if(environment.error) {
 }
 
 import express from 'express'
+import cors from 'cors'
 import rootRouter from './routes/root.route.js'
 import { isInteger } from './utils.js';
 import { logger } from "./logger.js"
@@ -14,6 +15,7 @@ import { logger } from "./logger.js"
 const app = express()
 
 function setupExpress() {
+  app.use(cors())
   app.use(express.json())
   app.use("/api/v1", rootRouter)
 }

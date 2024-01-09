@@ -1,1 +1,30 @@
-<p>main works!</p>
+<main class="main">
+  <section class="main-hero">
+    <article class="main-hero-container">
+      <h1>Crea un documento excel con <br>los datos de tu archivo JSON </h1>
+
+      <app-button class="inverseColor">
+        Revisa la documentación
+      </app-button>
+    </article>
+  </section>
+
+
+  <section class="main-content">
+    <article class="main-content-container">
+      <h2>ingresa el documento JSON que <br> usaremos para generar el documento <br> excel</h2>
+
+      <div class="fileInput-container" [formGroup]="form">
+        <app-file-input formControlName="file">
+        </app-file-input>
+
+        <app-button (click)="submitData()" [disabled]="this.form.invalid || !form.value.file">
+          Crear Excel
+        </app-button>
+        @if (form.invalid && form.touched) {
+          <p class="text-danger">Debes agregar un archivo .json válido</p>
+        }
+      </div>
+    </article>
+  </section>
+</main>

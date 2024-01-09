@@ -7,13 +7,10 @@ const createExcelRouter = express.Router()
 
 createExcelRouter.post('', function root(req: Request, resp: Response) {
   const body = req.body
-  
   try {
     const workBook = createExcel(body)
     
     workBook.write('test2.xlsx', resp)
-    resp.status(201).send()
-    // console.log(workBook)
   } catch (error) {
       logger.error(error)
       resp.status(500).send('ups, a ocurrido un error generando el archivo')

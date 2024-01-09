@@ -5,6 +5,11 @@ import { DocsComponent } from './pages/docs/docs.component';
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'crear',
+    pathMatch: 'full'
+  },
+  {
+    path: 'crear',
     component: MainComponent
   },
   {
