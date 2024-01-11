@@ -1,0 +1,55 @@
+.docs-container {
+  min-height: 90vh;
+}
+
+.docs-sidenav {
+  min-width: 150px;
+  padding: 65px 40px 40px 30px;
+  background: #fffcfd;
+  border-right: 1px solid #f5a4a41f;
+}
+
+.docs-sidenav-nav {
+  position: fixed;
+}
+
+.docs-sidenav-navItem {
+  list-style: none;
+  color: var(--fn-color-main);
+  font-weight: 500;
+}
+
+.docs-sidenav-navItem a {
+  text-decoration: none;
+}
+
+.docs-sidenav-navItem a:hover,
+.docs-sidenav-navItem.active{
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--fn-color-danger);
+}
+
+.docs-sidenav-content {
+  overflow: hidden;
+  padding: 20px var(--page-padding) 25px;
+}
+
+.sidenav-button {
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--fn-color-button);
+  font-size: 15px;
+}
+
+.sidenav-button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .docs-sidenav-content {
+    /* padding: 20px var(--page-padding) 35px 70px; */
+    padding: 20px var(--page-padding) 35px 0;
+  }
+}

@@ -15,10 +15,15 @@
 
 .main-content-container  {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  padding-top: 45px;
+  padding: 40px 0;
 }
 
+.main-content-container h2 {
+  padding-bottom: 25px;
+  text-align: center;
+}
 
 .fileInput-container {
   display: flex;
@@ -30,4 +35,17 @@
 
 .text-danger {
   margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .main-content-container  {
+    flex-direction: row;
+    padding: 0;
+    padding-top: 45px;
+  }
+
+  .main-content-container h2 {
+    padding-bottom: 0px;
+    text-align: left;
+  }
 }

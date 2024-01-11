@@ -1,1 +1,23 @@
-<p>docs works!</p>
+<mat-drawer-container class="docs-container" autosize>
+  <mat-drawer #drawer opened class="docs-sidenav" mode="side">
+    <!-- <p>Auto-resizing sidenav</p> -->
+    <nav class="docs-sidenav-nav">
+      <li class="docs-sidenav-navItem" routerLinkActive="active" routerLink="/docs" [routerLinkActiveOptions]="{exact: true}"><a>Introducción</a></li>
+      <li class="docs-sidenav-navItem" routerLinkActive="active" routerLink="/docs/crear-excel"><a>Crear un Excel</a></li>
+    </nav>
+    <!-- @if (showFiller) {
+      <p>Lorem, ipsum dolor sit amet consectetur.</p>
+    }
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+  </mat-drawer>
+
+  <div class="docs-sidenav-content" [ngStyle]=" {'padding-left': drawer.opened ? '70px' : 'var(--page-padding)'}">
+    <button type="button" class="sidenav-button" (click)="drawer.toggle()">
+      {{drawer.opened ? '⬅️ Cerrar' : '➡️ Abrir'}} menu
+    </button>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
+
