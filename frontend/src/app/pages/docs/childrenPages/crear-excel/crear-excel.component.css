@@ -1,0 +1,13 @@
+
+span {
+  color: var(--fn-span-color);
+  font-weight: 500;
+}
+
+.mandatory {
+  color: var(--fn-color-danger);
+}
+
+.non-mandatory {
+  color: var(--fn-color-success);
+}

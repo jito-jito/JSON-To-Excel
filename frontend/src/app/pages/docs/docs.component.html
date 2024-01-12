@@ -1,5 +1,8 @@
-<mat-drawer-container class="docs-container" autosize>
-  <mat-drawer #drawer opened class="docs-sidenav" mode="side">
+<button class="docs-sidenav-toggleButton" [class.menuClosed]="!drawer.opened" (click)="drawer.toggle()">
+  <img src="../../../assets/menuIcon.png" alt="">
+</button>
+<mat-drawer-container class="docs-container" autosize [hasBackdrop]="false" >
+  <mat-drawer #drawer [mode]="viewportWidth <= 578 ? 'over' : 'side'" opened  class="docs-sidenav">
     <!-- <p>Auto-resizing sidenav</p> -->
     <nav class="docs-sidenav-nav">
       <li class="docs-sidenav-navItem" routerLinkActive="active" routerLink="/docs" [routerLinkActiveOptions]="{exact: true}"><a>Introducción</a></li>
@@ -13,7 +16,7 @@
     </button> -->
   </mat-drawer>
 
-  <div class="docs-sidenav-content" [ngStyle]=" {'padding-left': drawer.opened ? '70px' : 'var(--page-padding)'}">
+  <div class="docs-sidenav-content" [ngStyle]=" {'padding-left': drawer.opened && viewportWidth >= 578  ? '70px' : 'var(--page-padding)'}">
     <button type="button" class="sidenav-button" (click)="drawer.toggle()">
       {{drawer.opened ? '⬅️ Cerrar' : '➡️ Abrir'}} menu
     </button>

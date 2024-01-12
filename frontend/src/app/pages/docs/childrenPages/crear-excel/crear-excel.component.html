@@ -1,1 +1,42 @@
-<p>crear-excel works!</p>
+<h1>Crear un excel</h1>
+
+<p>
+  Antes de comenzar, prepara tus datos en un archivo JSON siguiendo el formato especificado acontinuación.
+</p>
+
+<h2>Formato del JSON</h2>
+
+<p>
+  El formato del JSON debe seguir la estructura definida para la generación del Excel. Aquí hay una descripción de la función que tiene cada propiedad:
+</p>
+
+<ul>
+  <li><strong>tableType: string <span class="mandatory">(obligatorio)</span> :</strong> Indica el tipo de disposición de la tabla, actualmente solo compatible con el tipo: <span>'byRow'</span>.
+  </li>
+
+  <li><strong>sheetName: string <span class="non-mandatory">(opcional)</span> :</strong> Especifica el nombre de la hoja de Excel que se utilizará para crear la tabla, por defecto el valor es <span>'hoja 1'.</span></li>
+
+  <li><strong>title: string <span class="non-mandatory">(opcional)</span> :</strong>  Define el título principal de la tabla en el Excel, por defecto el valor es <span>'titulo de la tabla'.</span></li>
+
+  <li><strong>headerColumns: string[] <span class="mandatory">(obligatorio)</span> :</strong>  Lista las columnas de encabezado en la tabla, los valores ingresados aquí deben coincidir con el nombre de las propiedades indicadas en los datos a cargar.</li>
+
+  <li><strong>data: {{ '{' }}[key: string]: string {{ '}' }} <span class="mandatory">(obligatorio)</span> :</strong> Contiene los datos de la tabla en un formato de matriz de objetos, el nombre de la propiedad debe ser identico al nombre agregado en <span>'headerColumns'</span> ya que será utilizado para definir en que columna de la tabla ingresaremos el valor.
+    <br>
+    si agregas una propiedad con un nombre diferente este valor será ignorado en el registro de la tabla.
+  </li>
+</ul>
+
+
+
+
+<h2>Ejemplo</h2>
+<code>
+ var = 3
+</code>
+<h2>Cargando el documento</h2>
+
+<h2>Proceso de creación</h2>
+
+<h2>posibles errores</h2>
+
+<h2>Resultado esperado</h2>

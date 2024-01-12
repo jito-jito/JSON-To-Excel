@@ -47,6 +47,44 @@
   cursor: pointer;
 }
 
+.docs-sidenav-toggleButton {
+  position: fixed;
+  bottom: 41px;
+  left: 120px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding: 0;
+  height: 50px;
+  border: none;
+  background: #f1d0d085;
+  border-radius: 100%;
+  transform: rotate(180deg);
+  transition: transform ease-out 200ms;
+}
+
+.docs-sidenav-toggleButton:hover {
+  cursor: pointer;
+}
+
+.docs-sidenav-toggleButton.menuClosed {
+  transform: translate(-130px, 0px);
+}
+
+.docs-sidenav-toggleButton img {
+  width: 35px;
+  height: 35px;
+  transition: width ease-out 100ms;
+  transition: height ease-out 100ms;
+}
+
+.docs-sidenav-toggleButton:hover img {
+  width: 38px;
+  height: 38px;
+}
+
 @media (min-width: 768px) {
   .docs-sidenav-content {
     /* padding: 20px var(--page-padding) 35px 70px; */

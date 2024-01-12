@@ -11,6 +11,8 @@
   --fn-color-button: #290042;
   --fn-color-button--disabled: #FFF;
   --fn-color-danger: #EB0A1E;
+  --fn-color-success: #3b7f3d;
+  --fn-span-color: #BB2047;
   --main-font: 'Saira Semi Condensed', sans-serif;
 
   --page-padding: 15px;
@@ -34,6 +36,20 @@ h1 {
 h2 {
   font-size: 18px;
 }
+
+p span {
+  color: var(--fn-span-color);
+  font-weight: 500;
+}
+
+p a {
+  color: var(--fn-color-danger);
+}
+
+p a:hover {
+  font-weight: 500;
+}
+
 
 .text-danger {
   color: var(--fn-color-danger);
